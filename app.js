@@ -3,11 +3,20 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+
+// setup session
+app.set('trust proxy', 1);
+app.use(session({
+  secret: 'my secret',      // used to encrypt session id
+  resave: false,            // force save session even if session data not change
+  saveUninitialized: true   // force save session if it is new
+}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
