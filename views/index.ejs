@@ -6,6 +6,12 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %> Vcttai</p>
+    <p>Welcome to <%= title %>, <%= username %></p>
+
+    <% if (isLoggedIn) { %>
+      <form action="/logout?_method=DELETE" method="POST">
+        <button type="submit">Log Out</button>
+      </form>
+    <% } %>
   </body>
 </html>
