@@ -8,6 +8,7 @@
 
 * Install packages: `npm i`
 * Start the server: `npm run startDev` or `npm start`
+* Access to the link: [localhost:3000/login](http://localhost:3000/login)
 
 ```
 Note: Everytime the server restarts, you have to register users again.
