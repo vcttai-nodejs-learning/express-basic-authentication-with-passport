@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+
+    <body>
+        <h1>User info</h1>
+        <hr>
+
+        <div>
+            <p>Name: <%= username %></p>
+            <div>
+                <span>Avatar: </span>
+                <img src="/avatar.jpg" height="300px" width="300px"/>
+                <br />
+                
+                <form action='/users/upload_avatar' method="POST" enctype="multipart/form-data">
+                    <span>Change avatar (.jpg only): </span>
+                    <input type="file" name="avatar" accept=".jpg" />
+                    <input type="submit" />
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

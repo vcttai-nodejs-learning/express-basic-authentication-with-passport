@@ -47,7 +47,7 @@ app.use(passport.session());
 
 // setup routing
 app.use('/', indexRouter);
-app.use('/users', checkRequestAuthenticated, usersRouter);
+app.use('/users', usersRouter);
 app.use('/login', checkRequestNotAuthenticated, loginRouter(passport));
 app.use('/register', checkRequestNotAuthenticated, registerRouter);
 app.use('/logout', logoutRouter);

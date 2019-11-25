@@ -7,6 +7,7 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %>, <%= username %></p>
+    <a href="/users">User info</a>
 
     <% if (isLoggedIn) { %>
       <form action="/logout?_method=DELETE" method="POST">
